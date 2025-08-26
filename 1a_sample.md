@@ -1,52 +1,44 @@
 
-では、「AI OCRとは何か？」の説明の後に続ける形で、**Trump’s letter の例**を従来OCR（EasyOCR）とAI OCR（Gemma3）で比較する紹介文を作ってみますね。
-
 ---
 
 ### 例1: Trump’s Letter 画像
 
-まずは、手書き風の手紙画像を題材にします。
-従来のOCR（ここでは **EasyOCR**）を使うと、文字の検出や抽出はできます。
-しかし、以下のような特徴があります：
+まずは、手紙画像を題材にします。
+従来型OCR **EasyOCR**　を比較に使います。
+同一の画像（参照）から、解析を実施し、結果を比較しました。
 
 * **EasyOCR の結果**
-
-  * 単語単位で区切られることが多く、文章としての流れは再構築が必要。
-  * 改行やスペースの扱いが揺らぎやすい。
-  * 読み間違いが少なくても、文意をそのまま読むのはやや労力がかかる。
-
-一方で、\*\*AI OCR（Gemma3 + Ollama）\*\*を使うと：
+* 
+全文抽出
+```
+It is & Great Honor for me to send you this letter in that it demonstrales the strength and commitment of our Trading Relationship, and the fact that the United Stales of America has agrced to continue working with Japan. despite having significant Trade Deficit with your grcat Country:
+```
+  * **誤認識も時折見受けられる。文脈を理解して自動で修正することはできない。**
 
 * **Gemma3 の結果**
-
-  * テキストが文章単位で自然にまとめられる。
-  * 手紙としての体裁を保ったまま抽出できる。
-  * さらに、指示を加えれば「要約」や「感情分析」といった二次処理も同時に可能。
-
-例として、以下のように質問を投げるだけで結果が得られます：
-
-```python
-# Image path
-path1 = "/kaggle/input/two-dogs/trump/trump/trump1.png"
-
-# Questions
-questions = [ 
-    "Extract all the text from the image.",
-    "Summarize the content."
-]
+* 
+全文抽出
+```
+It is a great honor for me to send you this letter in that it demonstrates the strength and commitment of our Trading Relationship, and in that the United States of America has agreed to continue working with Japan, despite having a significant Trade Deficit with your great Country.
+```
+要約作成
+```
+The United States is urging Japan to maintain its trade relationship, despite a significant trade deficit. The U.S. proposes a 25% tariff on Japanese goods entering the U.S., arguing this is necessary to correct Japan’s tariffs and trade barriers which are causing a major trade deficit for the United States. The U.S. emphasizes the need for a swift and professional agreement to resolve this issue.
 ```
 
-結果のイメージ：
+  * **文脈に基づいた補正が入っているため、誤認識がほとんど目立たない。**
+  * **指示を加えれば「要約」など二次処理も同時に可能。**
 
-* **Extract all the text** → 手紙全文が文字起こしされる
-* **Summarize the content** → 「トランプ氏がある人物に感謝を伝えている短い手紙」といった要約が生成される
+
+まとめると、
+
+* **EasyOCR =「文字起こしとしては高性能、しかし文脈理解は出来ず、誤りはそのまま残る」**
+ 
+* **Gemma3 = 「文字起こししながら、文脈を理解し、誤りを補正できる。さらに加工などのタスクに対応可能」**
+
+であり、AI OCRの有用性がお分かりいただけたかと思います。
+
+
 
 ---
 
-こうすると、「従来OCRでは文字起こし止まり」「AI OCRなら＋αで理解・加工が可能」という違いが視覚的にも伝わります。
-
-👉 次の例として **ナンバープレート** や **レシート** を持ってくれば、「汎用性の高さ」がさらに分かりやすくなる流れになります。
-
----
-
-ご希望ですが、この **Trump’s letter の部分**を note 用に「図＋比較表」形式でまとめた方がいいですか？ それともまずは文章だけで進めますか？
