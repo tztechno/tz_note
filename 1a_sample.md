@@ -11,7 +11,7 @@
 ```
 It is & Great Honor for me to send you this letter in that it demonstrales the strength and commitment of our Trading Relationship, and the fact that the United Stales of America has agrced to continue working with Japan. despite having significant Trade Deficit with your grcat Country:
 ```
-誤認識も時折見受けられます。文脈を理解して自動で修正することはできません。
+スペルミスも時折見受けられます。しかし従来型OCRは、文脈を理解して自動で修正することはできません。
 
 ### **Gemma3 の結果**
 
@@ -25,13 +25,13 @@ It is a great honor for me to send you this letter in that it demonstrates the s
 The United States is urging Japan to maintain its trade relationship, despite a significant trade deficit. The U.S. proposes a 25% tariff on Japanese goods entering the U.S., arguing this is necessary to correct Japan’s tariffs and trade barriers which are causing a major trade deficit for the United States. The U.S. emphasizes the need for a swift and professional agreement to resolve this issue.
 ```
 
-文脈に基づいた補正が入っているため、誤認識がほとんど目立ちません。指示を加えれば「要約」など二次処理も同時に可能です。
+文脈に基づいた補正が入っているため、誤りがほとんど目立ちません。「要約」など別のタスクを指示することで同時に結果が取得可能です。
 
 ### **まとめ**
 
 ```
 EasyOCR =「文字起こしとしては高性能です、しかし文脈理解は出来ず誤りはそのまま残ります」
-Gemma3 = 「文字起こししながら、文脈を理解し誤りを補正できます。さらに加工などのタスクに対応可能です」
+Gemma3 = 「文字起こししながら、文脈を理解し誤りを補正できます。さらに要約など別のタスクに対応可能です」
 ```
 
 従来型OCRとAI OCRを比較してみました。AI OCRの有用性がお分かりいただけたかと思います。
