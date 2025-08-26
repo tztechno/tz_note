@@ -1,39 +1,37 @@
 
 ---
 
-### 例1: Trump’s Letter 画像
+## 例1: Trump’s Letter 画像
 
-まずは、手紙画像を題材にします。
-従来型OCR **EasyOCR**　を比較に使います。
-同一の画像（参照）から、解析を実施し、結果を比較しました。
+まずは、手紙画像を題材にします。従来型OCR **EasyOCR**　を比較に使います。同一の画像（参照）から、解析を実施し、結果を比較しました。
 
-**EasyOCR の結果**
+### **EasyOCR の結果**
 
 全文抽出
 ```
 It is & Great Honor for me to send you this letter in that it demonstrales the strength and commitment of our Trading Relationship, and the fact that the United Stales of America has agrced to continue working with Japan. despite having significant Trade Deficit with your grcat Country:
 ```
-誤認識も時折見受けられる。文脈を理解して自動で修正することはできない。
+誤認識も時折見受けられるが、文脈を理解して自動で修正することはできません。
 
-**Gemma3 の結果**
+### **Gemma3 の結果**
 
-全文抽出
+* 全文抽出
 ```
 It is a great honor for me to send you this letter in that it demonstrates the strength and commitment of our Trading Relationship, and in that the United States of America has agreed to continue working with Japan, despite having a significant Trade Deficit with your great Country.
 ```
-要約作成
+* 要約作成
 ```
 The United States is urging Japan to maintain its trade relationship, despite a significant trade deficit. The U.S. proposes a 25% tariff on Japanese goods entering the U.S., arguing this is necessary to correct Japan’s tariffs and trade barriers which are causing a major trade deficit for the United States. The U.S. emphasizes the need for a swift and professional agreement to resolve this issue.
 ```
 
-文脈に基づいた補正が入っているため、誤認識がほとんど目立たない。
-指示を加えれば「要約」など二次処理も同時に可能。
+文脈に基づいた補正が入っているため、誤認識がほとんど目立ちません。
+指示を加えれば「要約」など二次処理も同時に可能です。
 
 
-**まとめ**
+### **まとめ**
 
-EasyOCR =「文字起こしとしては高性能、しかし文脈理解は出来ず、誤りはそのまま残る」
-Gemma3 = 「文字起こししながら、文脈を理解し、誤りを補正できる。さらに加工などのタスクに対応可能」
+EasyOCR =「文字起こしとしては高性能、しかし文脈理解は出来ず誤りはそのまま残る」
+Gemma3 = 「文字起こししながら、文脈を理解し誤りを補正できる。さらに加工などのタスクに対応可能」
 
 従来型OCRとAI OCRを比較してみました。AI OCRの有用性がお分かりいただけたかと思います。
 
