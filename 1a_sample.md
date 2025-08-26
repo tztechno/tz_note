@@ -29,8 +29,10 @@ The United States is urging Japan to maintain its trade relationship, despite a 
 
 ### **まとめ**
 
+```
 EasyOCR =「文字起こしとしては高性能です、しかし文脈理解は出来ず誤りはそのまま残ります」
 Gemma3 = 「文字起こししながら、文脈を理解し誤りを補正できます。さらに加工などのタスクに対応可能です」
+```
 
 従来型OCRとAI OCRを比較してみました。AI OCRの有用性がお分かりいただけたかと思います。
 
