@@ -20,8 +20,8 @@ Detected text 4: ''HRS' (Confidence: 0.70)
 
 Full license plate text: 'Cjpiana Ibi '1BY3737 'HRS'
 ```
-* Number Plate文字抽出はかなり出来ているが若干誤りがある。Number Plate以外の文字も抽出してしまう。
-* Number Plateを正確に読み取るには、目視による修正が必須。
+* ナンバープレート文字抽出はかなり出来ているが若干誤りがある。ナンバープレート以外の文字も抽出してしまう。
+* ナンバープレートを正確に読み取るには、目視による修正が必須。
 
 * **Gemma3 の結果**
 
@@ -35,7 +35,7 @@ Question 2: What is the number of the licence plate?
 Answer: The license plate number is **HR51BV3737**.
 ```
 
-* Number Plate情報を正しく読み取った。
+* ナンバープレート情報を正しく読み取った。
 * 画像から車の車種、周囲の道路状況まで推定した。
 
 ---
