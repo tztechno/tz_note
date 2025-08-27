@@ -22,7 +22,7 @@ It is a great honor for me to send you this letter in that it demonstrates the s
 
 * 要約作成
 ```
-The United States is urging Japan to maintain its trade relationship, despite a significant trade deficit. The U.S. proposes a 25% tariff on Japanese goods entering the U.S., arguing this is necessary to correct Japan’s tariffs and trade barriers which are causing a major trade deficit for the United States. The U.S. emphasizes the need for a swift and professional agreement to resolve this issue.
+The United States is initiating a new, reciprocal trade agreement with Japan to address a significant trade deficit. Starting August 1, 2025, the U.S. will impose a 25% tariff on all Japanese goods entering the country. This tariff is designed to level the playing field and prevent goods transshipped to avoid the tariff from being subject to it. The U.S. intends to encourage Japanese companies to build or manufacture products within the United States, and will provide support to facilitate this.
 ```
 
 文脈に基づいた補正が入っているため、誤りがほとんど目立ちません。「要約」など別のタスクを指示することで同時に結果が取得可能です。
